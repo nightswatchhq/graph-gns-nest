@@ -20,5 +20,6 @@ which the Network subgraph may fold into its entity model.
 ## Provenance and release gate
 
 The contract is L2GNS at `0xec9A7fb6CbC2E41926127929c2dcE6e9c5D33Bec`. The ABI is vendored from
-the production nest. Before catalogue availability, record fixed-block parity fixtures against the
-Lodestar production chart and document its known L1/legacy divergence.
+the production nest. Archive-backed fixed-range fixtures are committed under `checks/expected/`.
+The remaining release work is an independent comparison with the Lodestar chart, an explicit
+L1/legacy-divergence statement, and a Lodestar cutover.
