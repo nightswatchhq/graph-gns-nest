@@ -1,0 +1,152 @@
+[
+  {
+    "cumulative_published": "3112",
+    "partial": true,
+    "published_count": 30,
+    "week_start": "Timestamp(Microsecond, 1786309200000000)"
+  },
+  {
+    "cumulative_published": "3082",
+    "partial": false,
+    "published_count": 36,
+    "week_start": "Timestamp(Microsecond, 1785704400000000)"
+  },
+  {
+    "cumulative_published": "3046",
+    "partial": false,
+    "published_count": 15,
+    "week_start": "Timestamp(Microsecond, 1785099600000000)"
+  },
+  {
+    "cumulative_published": "3031",
+    "partial": false,
+    "published_count": 33,
+    "week_start": "Timestamp(Microsecond, 1784494800000000)"
+  },
+  {
+    "cumulative_published": "2998",
+    "partial": false,
+    "published_count": 33,
+    "week_start": "Timestamp(Microsecond, 1783890000000000)"
+  },
+  {
+    "cumulative_published": "2965",
+    "partial": false,
+    "published_count": 27,
+    "week_start": "Timestamp(Microsecond, 1783285200000000)"
+  },
+  {
+    "cumulative_published": "2938",
+    "partial": false,
+    "published_count": 24,
+    "week_start": "Timestamp(Microsecond, 1782680400000000)"
+  },
+  {
+    "cumulative_published": "2914",
+    "partial": false,
+    "published_count": 36,
+    "week_start": "Timestamp(Microsecond, 1782075600000000)"
+  },
+  {
+    "cumulative_published": "2878",
+    "partial": false,
+    "published_count": 28,
+    "week_start": "Timestamp(Microsecond, 1781470800000000)"
+  },
+  {
+    "cumulative_published": "2850",
+    "partial": false,
+    "published_count": 56,
+    "week_start": "Timestamp(Microsecond, 1780866000000000)"
+  },
+  {
+    "cumulative_published": "2794",
+    "partial": false,
+    "published_count": 37,
+    "week_start": "Timestamp(Microsecond, 1780261200000000)"
+  },
+  {
+    "cumulative_published": "2757",
+    "partial": false,
+    "published_count": 47,
+    "week_start": "Timestamp(Microsecond, 1779656400000000)"
+  },
+  {
+    "cumulative_published": "2710",
+    "partial": false,
+    "published_count": 32,
+    "week_start": "Timestamp(Microsecond, 1779051600000000)"
+  },
+  {
+    "cumulative_published": "2678",
+    "partial": false,
+    "published_count": 34,
+    "week_start": "Timestamp(Microsecond, 1778446800000000)"
+  },
+  {
+    "cumulative_published": "2644",
+    "partial": false,
+    "published_count": 35,
+    "week_start": "Timestamp(Microsecond, 1777842000000000)"
+  },
+  {
+    "cumulative_published": "2609",
+    "partial": false,
+    "published_count": 44,
+    "week_start": "Timestamp(Microsecond, 1777237200000000)"
+  },
+  {
+    "cumulative_published": "2565",
+    "partial": false,
+    "published_count": 41,
+    "week_start": "Timestamp(Microsecond, 1776632400000000)"
+  },
+  {
+    "cumulative_published": "2524",
+    "partial": false,
+    "published_count": 41,
+    "week_start": "Timestamp(Microsecond, 1776027600000000)"
+  },
+  {
+    "cumulative_published": "2483",
+    "partial": false,
+    "published_count": 47,
+    "week_start": "Timestamp(Microsecond, 1775422800000000)"
+  },
+  {
+    "cumulative_published": "2436",
+    "partial": false,
+    "published_count": 35,
+    "week_start": "Timestamp(Microsecond, 1774818000000000)"
+  },
+  {
+    "cumulative_published": "2401",
+    "partial": false,
+    "published_count": 53,
+    "week_start": "Timestamp(Microsecond, 1774216800000000)"
+  },
+  {
+    "cumulative_published": "2348",
+    "partial": false,
+    "published_count": 41,
+    "week_start": "Timestamp(Microsecond, 1773612000000000)"
+  },
+  {
+    "cumulative_published": "2307",
+    "partial": false,
+    "published_count": 88,
+    "week_start": "Timestamp(Microsecond, 1773007200000000)"
+  },
+  {
+    "cumulative_published": "2219",
+    "partial": false,
+    "published_count": 49,
+    "week_start": "Timestamp(Microsecond, 1772402400000000)"
+  },
+  {
+    "cumulative_published": "2170",
+    "partial": false,
+    "published_count": 68,
+    "week_start": "Timestamp(Microsecond, 1771797600000000)"
+  }
+]

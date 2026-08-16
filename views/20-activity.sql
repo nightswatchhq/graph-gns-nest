@@ -10,7 +10,9 @@ SELECT
   week_start,
   published_count,
   SUM(published_count) OVER (ORDER BY week_start) AS cumulative_published,
-  week_start = date_trunc('week', now()) AS partial
+  -- The latest observed week may still receive publications. Derive this solely from indexed
+  -- chain data, rather than wall-clock `now()`, so a sealed historical query is reproducible.
+  week_start = MAX(week_start) OVER () AS partial
 FROM weeks
 ORDER BY week_start;
 

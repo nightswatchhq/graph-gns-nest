@@ -1,7 +1,7 @@
 # Graph Name Service nest
 
-An installable Nuthatch nest for L2GNS publication activity on Arbitrum One. It is the packaged
-source of the nest serving Lodestar's Developer Activity chart.
+An installable Nuthatch nest for L2GNS publication activity on Arbitrum One. It is the standalone
+package intended to serve Lodestar's Developer Activity chart.
 
 ```sh
 nuthatch init --from https://github.com/nightswatchhq/graph-gns-nest
