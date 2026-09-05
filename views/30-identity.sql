@@ -10,7 +10,10 @@ SELECT tx_hash || '-' || CAST(log_index AS VARCHAR)                             
        CAST(subgraphID AS VARCHAR)                                                       AS subgraph_id,
        subgraphDeploymentID                                                              AS deployment_id,
        versionMetadata                                                                   AS version_metadata,
-       ROW_NUMBER() OVER (PARTITION BY subgraphID ORDER BY block_number, log_index) - 1 AS version,
+       -- `version_number`, not `version`: a bare `version` binds to DuckDB's `version()` function in the
+       -- nest's DuckDB, and the first cut of this view shipped a DuckDB version string as the subgraph's
+       -- version (nest log, 2026-09-05).
+       ROW_NUMBER() OVER (PARTITION BY subgraphID ORDER BY block_number, log_index) - 1 AS version_number,
        CAST(block_timestamp AS BIGINT)                                                   AS created_at,
        block_number,
        tx_hash
@@ -21,7 +24,7 @@ FROM gns__subgraph_version_updated;
 -- newest one is the subgraph's metadata now.
 CREATE VIEW subgraph_current AS
 WITH latest_version AS (
-  SELECT subgraph_id, deployment_id, version_metadata, version, created_at AS version_created_at
+  SELECT subgraph_id, deployment_id, version_metadata, version_number, created_at AS version_created_at
   FROM (SELECT *, ROW_NUMBER() OVER (PARTITION BY subgraph_id ORDER BY block_number DESC, id DESC) AS rn FROM subgraph_versions)
   WHERE rn = 1
 ),
@@ -41,7 +44,7 @@ from_l1 AS (
 )
 SELECT v.subgraph_id,
        v.deployment_id                       AS current_deployment_id,
-       v.version                             AS current_version,
+       v.version_number                      AS current_version,
        v.version_metadata                    AS current_version_metadata,
        m.subgraph_metadata,
        m.metadata_updated_at,
@@ -60,7 +63,7 @@ LEFT JOIN from_l1 l ON l.subgraph_id = v.subgraph_id;
 CREATE VIEW deployment_subgraphs AS
 SELECT sv.deployment_id,
        sv.subgraph_id,
-       sv.version,
+       sv.version_number,
        sv.version_metadata,
        sv.created_at,
        sc.current_deployment_id = sv.deployment_id AS is_current,
