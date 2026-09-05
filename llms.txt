@@ -6,7 +6,14 @@ A self-hosted blockchain index. Query it locally; there is no third-party API.
 - `gns` = 0xec9A7fb6CbC2E41926127929c2dcE6e9c5D33Bec
 
 ## Tables (one per contract event)
+- `gns__legacy_subgraph_claimed` - LegacySubgraphClaimed(address,uint256) (block_number, block_hash, block_timestamp, tx_hash, log_index, address, _seq, graphAccount, subgraphNumber)
+- `gns__set_default_name` - SetDefaultName(address,uint256,bytes32,string) (block_number, block_hash, block_timestamp, tx_hash, log_index, address, _seq, graphAccount, nameSystem, nameIdentifier, name)
+- `gns__subgraph_deprecated` - SubgraphDeprecated(uint256,uint256) (block_number, block_hash, block_timestamp, tx_hash, log_index, address, _seq, subgraphID, withdrawableGRT)
+- `gns__subgraph_metadata_updated` - SubgraphMetadataUpdated(uint256,bytes32) (block_number, block_hash, block_timestamp, tx_hash, log_index, address, _seq, subgraphID, subgraphMetadata)
 - `gns__subgraph_published` - SubgraphPublished(uint256,bytes32,uint32) (block_number, block_hash, block_timestamp, tx_hash, log_index, address, _seq, subgraphID, subgraphDeploymentID, reserveRatio)
+- `gns__subgraph_received_from_l1` - SubgraphReceivedFromL1(uint256,uint256,address,uint256) (block_number, block_hash, block_timestamp, tx_hash, log_index, address, _seq, _l1SubgraphID, _l2SubgraphID, _owner, _tokens)
+- `gns__subgraph_upgraded` - SubgraphUpgraded(uint256,uint256,uint256,bytes32) (block_number, block_hash, block_timestamp, tx_hash, log_index, address, _seq, subgraphID, vSignalCreated, tokensSignalled, subgraphDeploymentID)
+- `gns__subgraph_version_updated` - SubgraphVersionUpdated(uint256,bytes32,bytes32) (block_number, block_hash, block_timestamp, tx_hash, log_index, address, _seq, subgraphID, subgraphDeploymentID, versionMetadata)
 
 ## Live HTTP API (run `nuthatch dev`)
 - `GET /`                    index status
