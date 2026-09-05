@@ -7,6 +7,62 @@ schema_version = 1
 [nest]
 description = "The `graph-gns-nest` nest on arbitrum-one. (seeded from the ABI - edit semantic.toml to improve this)"
 
+[table.gns__legacy_subgraph_claimed]
+description = "`LegacySubgraphClaimed(address,uint256)` events emitted by the `gns` contract. (seeded from the ABI - edit semantic.toml to improve this)"
+grain = "one row per LegacySubgraphClaimed(address,uint256) event"
+
+[table.gns__legacy_subgraph_claimed.columns]
+graphAccount = "The `graphAccount` address parameter. (seeded from the ABI - edit semantic.toml to improve this)"
+subgraphNumber = "The `subgraphNumber` uint256 parameter. (seeded from the ABI - edit semantic.toml to improve this)"
+
+[table.gns__legacy_subgraph_claimed.footguns]
+big_ints = ["subgraphNumber"]
+overflows_dec = ["subgraphNumber"]
+
+[table.gns__set_default_name]
+description = "`SetDefaultName(address,uint256,bytes32,string)` events emitted by the `gns` contract. (seeded from the ABI - edit semantic.toml to improve this)"
+grain = "one row per SetDefaultName(address,uint256,bytes32,string) event"
+
+[table.gns__set_default_name.columns]
+graphAccount = "The `graphAccount` address parameter. (seeded from the ABI - edit semantic.toml to improve this)"
+name = "The `name` string parameter. (seeded from the ABI - edit semantic.toml to improve this)"
+nameIdentifier = "The `nameIdentifier` bytes32 parameter. (seeded from the ABI - edit semantic.toml to improve this)"
+nameSystem = "The `nameSystem` uint256 parameter. (seeded from the ABI - edit semantic.toml to improve this)"
+
+[table.gns__set_default_name.footguns]
+big_ints = ["nameSystem"]
+overflows_dec = ["nameSystem"]
+
+[table.gns__subgraph_deprecated]
+description = "`SubgraphDeprecated(uint256,uint256)` events emitted by the `gns` contract. (seeded from the ABI - edit semantic.toml to improve this)"
+grain = "one row per SubgraphDeprecated(uint256,uint256) event"
+
+[table.gns__subgraph_deprecated.columns]
+subgraphID = "The `subgraphID` uint256 parameter. (seeded from the ABI - edit semantic.toml to improve this)"
+withdrawableGRT = "The `withdrawableGRT` uint256 parameter. (seeded from the ABI - edit semantic.toml to improve this)"
+
+[table.gns__subgraph_deprecated.footguns]
+big_ints = [
+    "subgraphID",
+    "withdrawableGRT",
+]
+overflows_dec = [
+    "subgraphID",
+    "withdrawableGRT",
+]
+
+[table.gns__subgraph_metadata_updated]
+description = "`SubgraphMetadataUpdated(uint256,bytes32)` events emitted by the `gns` contract. (seeded from the ABI - edit semantic.toml to improve this)"
+grain = "one row per SubgraphMetadataUpdated(uint256,bytes32) event"
+
+[table.gns__subgraph_metadata_updated.columns]
+subgraphID = "The `subgraphID` uint256 parameter. (seeded from the ABI - edit semantic.toml to improve this)"
+subgraphMetadata = "The `subgraphMetadata` bytes32 parameter. (seeded from the ABI - edit semantic.toml to improve this)"
+
+[table.gns__subgraph_metadata_updated.footguns]
+big_ints = ["subgraphID"]
+overflows_dec = ["subgraphID"]
+
 [table.gns__subgraph_published]
 description = "`SubgraphPublished(uint256,bytes32,uint32)` events emitted by the `gns` contract. (seeded from the ABI - edit semantic.toml to improve this)"
 grain = "one row per SubgraphPublished(uint256,bytes32,uint32) event"
@@ -17,6 +73,63 @@ subgraphDeploymentID = "The `subgraphDeploymentID` bytes32 parameter. (seeded fr
 subgraphID = "The `subgraphID` uint256 parameter. (seeded from the ABI - edit semantic.toml to improve this)"
 
 [table.gns__subgraph_published.footguns]
+big_ints = ["subgraphID"]
+overflows_dec = ["subgraphID"]
+
+[table.gns__subgraph_received_from_l1]
+description = "`SubgraphReceivedFromL1(uint256,uint256,address,uint256)` events emitted by the `gns` contract. (seeded from the ABI - edit semantic.toml to improve this)"
+grain = "one row per SubgraphReceivedFromL1(uint256,uint256,address,uint256) event"
+
+[table.gns__subgraph_received_from_l1.columns]
+_l1SubgraphID = "The `_l1SubgraphID` uint256 parameter. (seeded from the ABI - edit semantic.toml to improve this)"
+_l2SubgraphID = "The `_l2SubgraphID` uint256 parameter. (seeded from the ABI - edit semantic.toml to improve this)"
+_owner = "The `_owner` address parameter. (seeded from the ABI - edit semantic.toml to improve this)"
+_tokens = "The `_tokens` uint256 parameter. (seeded from the ABI - edit semantic.toml to improve this)"
+
+[table.gns__subgraph_received_from_l1.footguns]
+big_ints = [
+    "_l1SubgraphID",
+    "_l2SubgraphID",
+    "_tokens",
+]
+overflows_dec = [
+    "_l1SubgraphID",
+    "_l2SubgraphID",
+    "_tokens",
+]
+
+[table.gns__subgraph_upgraded]
+description = "`SubgraphUpgraded(uint256,uint256,uint256,bytes32)` events emitted by the `gns` contract. (seeded from the ABI - edit semantic.toml to improve this)"
+grain = "one row per SubgraphUpgraded(uint256,uint256,uint256,bytes32) event"
+
+[table.gns__subgraph_upgraded.columns]
+subgraphDeploymentID = "The `subgraphDeploymentID` bytes32 parameter. (seeded from the ABI - edit semantic.toml to improve this)"
+subgraphID = "The `subgraphID` uint256 parameter. (seeded from the ABI - edit semantic.toml to improve this)"
+tokensSignalled = "The `tokensSignalled` uint256 parameter. (seeded from the ABI - edit semantic.toml to improve this)"
+vSignalCreated = "The `vSignalCreated` uint256 parameter. (seeded from the ABI - edit semantic.toml to improve this)"
+
+[table.gns__subgraph_upgraded.footguns]
+big_ints = [
+    "subgraphID",
+    "vSignalCreated",
+    "tokensSignalled",
+]
+overflows_dec = [
+    "subgraphID",
+    "vSignalCreated",
+    "tokensSignalled",
+]
+
+[table.gns__subgraph_version_updated]
+description = "`SubgraphVersionUpdated(uint256,bytes32,bytes32)` events emitted by the `gns` contract. (seeded from the ABI - edit semantic.toml to improve this)"
+grain = "one row per SubgraphVersionUpdated(uint256,bytes32,bytes32) event"
+
+[table.gns__subgraph_version_updated.columns]
+subgraphDeploymentID = "The `subgraphDeploymentID` bytes32 parameter. (seeded from the ABI - edit semantic.toml to improve this)"
+subgraphID = "The `subgraphID` uint256 parameter. (seeded from the ABI - edit semantic.toml to improve this)"
+versionMetadata = "The `versionMetadata` bytes32 parameter. (seeded from the ABI - edit semantic.toml to improve this)"
+
+[table.gns__subgraph_version_updated.footguns]
 big_ints = ["subgraphID"]
 overflows_dec = ["subgraphID"]
 

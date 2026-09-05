@@ -12,4 +12,17 @@ alias = "gns"
 address = "0xec9A7fb6CbC2E41926127929c2dcE6e9c5D33Bec"
 abi = "abis/gns.json"
 # RFC-0011 allowlist: developer-activity only needs new-subgraph publishes.
-events = ["SubgraphPublished"]
+# The events behind a subgraph's identity off chain (nuthatch#1160, group B): every version's
+# deployment and version-metadata hash, the subgraph's metadata hash, upgrades, deprecations, the L1
+# transfers that created most L2 subgraphs, and a Graph account's declared default name. Signal events
+# are deliberately not here: graph-allocations-nest indexes them for the network figures.
+events = [
+    "SubgraphPublished",
+    "SubgraphVersionUpdated",
+    "SubgraphMetadataUpdated",
+    "SubgraphUpgraded",
+    "SubgraphDeprecated",
+    "SubgraphReceivedFromL1",
+    "LegacySubgraphClaimed",
+    "SetDefaultName",
+]

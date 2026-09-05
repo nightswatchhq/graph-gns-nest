@@ -1,6 +1,266 @@
 {
-  "registry_hash": "0x7bae0cedff1c43618062db72c2c2f0aa0d2812f3cd9f15275bbac58107f51f68",
+  "registry_hash": "0xc7bdc324253487329fd96557fb5fa6c8e4f66f2b4dc43bc4e0f8ad746ffe7f87",
   "tables": [
+    {
+      "alias": "gns",
+      "columns": [
+        {
+          "indexed": false,
+          "name": "block_number",
+          "sol_type": "implicit",
+          "storage": "u64"
+        },
+        {
+          "indexed": false,
+          "name": "block_hash",
+          "sol_type": "implicit",
+          "storage": "bytes32"
+        },
+        {
+          "indexed": false,
+          "name": "block_timestamp",
+          "sol_type": "implicit",
+          "storage": "u64"
+        },
+        {
+          "indexed": false,
+          "name": "tx_hash",
+          "sol_type": "implicit",
+          "storage": "bytes32"
+        },
+        {
+          "indexed": false,
+          "name": "log_index",
+          "sol_type": "implicit",
+          "storage": "u64"
+        },
+        {
+          "indexed": false,
+          "name": "address",
+          "sol_type": "implicit",
+          "storage": "address"
+        },
+        {
+          "indexed": false,
+          "name": "_seq",
+          "sol_type": "implicit",
+          "storage": "u64"
+        },
+        {
+          "indexed": true,
+          "name": "graphAccount",
+          "sol_type": "address",
+          "storage": "address"
+        },
+        {
+          "indexed": false,
+          "name": "subgraphNumber",
+          "sol_type": "uint256",
+          "storage": "word32"
+        }
+      ],
+      "event": "LegacySubgraphClaimed(address,uint256)",
+      "table": "gns__legacy_subgraph_claimed",
+      "topic0": "0x1590ec92d5ae8bf80e189f72f046f321fd1b70e45e90d132efbeca8ccea6b587"
+    },
+    {
+      "alias": "gns",
+      "columns": [
+        {
+          "indexed": false,
+          "name": "block_number",
+          "sol_type": "implicit",
+          "storage": "u64"
+        },
+        {
+          "indexed": false,
+          "name": "block_hash",
+          "sol_type": "implicit",
+          "storage": "bytes32"
+        },
+        {
+          "indexed": false,
+          "name": "block_timestamp",
+          "sol_type": "implicit",
+          "storage": "u64"
+        },
+        {
+          "indexed": false,
+          "name": "tx_hash",
+          "sol_type": "implicit",
+          "storage": "bytes32"
+        },
+        {
+          "indexed": false,
+          "name": "log_index",
+          "sol_type": "implicit",
+          "storage": "u64"
+        },
+        {
+          "indexed": false,
+          "name": "address",
+          "sol_type": "implicit",
+          "storage": "address"
+        },
+        {
+          "indexed": false,
+          "name": "_seq",
+          "sol_type": "implicit",
+          "storage": "u64"
+        },
+        {
+          "indexed": true,
+          "name": "graphAccount",
+          "sol_type": "address",
+          "storage": "address"
+        },
+        {
+          "indexed": false,
+          "name": "nameSystem",
+          "sol_type": "uint256",
+          "storage": "word32"
+        },
+        {
+          "indexed": false,
+          "name": "nameIdentifier",
+          "sol_type": "bytes32",
+          "storage": "fixed_bytes"
+        },
+        {
+          "indexed": false,
+          "name": "name",
+          "sol_type": "string",
+          "storage": "string"
+        }
+      ],
+      "event": "SetDefaultName(address,uint256,bytes32,string)",
+      "table": "gns__set_default_name",
+      "topic0": "0x753d0210fc6efd1598dc3e8bd4ffb0b4e53c5d869213e7a0fa846271cd6b54b1"
+    },
+    {
+      "alias": "gns",
+      "columns": [
+        {
+          "indexed": false,
+          "name": "block_number",
+          "sol_type": "implicit",
+          "storage": "u64"
+        },
+        {
+          "indexed": false,
+          "name": "block_hash",
+          "sol_type": "implicit",
+          "storage": "bytes32"
+        },
+        {
+          "indexed": false,
+          "name": "block_timestamp",
+          "sol_type": "implicit",
+          "storage": "u64"
+        },
+        {
+          "indexed": false,
+          "name": "tx_hash",
+          "sol_type": "implicit",
+          "storage": "bytes32"
+        },
+        {
+          "indexed": false,
+          "name": "log_index",
+          "sol_type": "implicit",
+          "storage": "u64"
+        },
+        {
+          "indexed": false,
+          "name": "address",
+          "sol_type": "implicit",
+          "storage": "address"
+        },
+        {
+          "indexed": false,
+          "name": "_seq",
+          "sol_type": "implicit",
+          "storage": "u64"
+        },
+        {
+          "indexed": true,
+          "name": "subgraphID",
+          "sol_type": "uint256",
+          "storage": "word32"
+        },
+        {
+          "indexed": false,
+          "name": "withdrawableGRT",
+          "sol_type": "uint256",
+          "storage": "word32"
+        }
+      ],
+      "event": "SubgraphDeprecated(uint256,uint256)",
+      "table": "gns__subgraph_deprecated",
+      "topic0": "0x905d48df574e150b8a08750819de0ccc5cd215a93b9ec0a345cf59687987bba1"
+    },
+    {
+      "alias": "gns",
+      "columns": [
+        {
+          "indexed": false,
+          "name": "block_number",
+          "sol_type": "implicit",
+          "storage": "u64"
+        },
+        {
+          "indexed": false,
+          "name": "block_hash",
+          "sol_type": "implicit",
+          "storage": "bytes32"
+        },
+        {
+          "indexed": false,
+          "name": "block_timestamp",
+          "sol_type": "implicit",
+          "storage": "u64"
+        },
+        {
+          "indexed": false,
+          "name": "tx_hash",
+          "sol_type": "implicit",
+          "storage": "bytes32"
+        },
+        {
+          "indexed": false,
+          "name": "log_index",
+          "sol_type": "implicit",
+          "storage": "u64"
+        },
+        {
+          "indexed": false,
+          "name": "address",
+          "sol_type": "implicit",
+          "storage": "address"
+        },
+        {
+          "indexed": false,
+          "name": "_seq",
+          "sol_type": "implicit",
+          "storage": "u64"
+        },
+        {
+          "indexed": true,
+          "name": "subgraphID",
+          "sol_type": "uint256",
+          "storage": "word32"
+        },
+        {
+          "indexed": false,
+          "name": "subgraphMetadata",
+          "sol_type": "bytes32",
+          "storage": "fixed_bytes"
+        }
+      ],
+      "event": "SubgraphMetadataUpdated(uint256,bytes32)",
+      "table": "gns__subgraph_metadata_updated",
+      "topic0": "0xd0348d353ba9da6b560ddf6465c3faf849b78869806be8900a829c064b8d4b21"
+    },
     {
       "alias": "gns",
       "columns": [
@@ -68,6 +328,222 @@
       "event": "SubgraphPublished(uint256,bytes32,uint32)",
       "table": "gns__subgraph_published",
       "topic0": "0x42a544925af95c7d50835f669fa06cc226acbf9eea3d0cb552b1b09bc8901426"
+    },
+    {
+      "alias": "gns",
+      "columns": [
+        {
+          "indexed": false,
+          "name": "block_number",
+          "sol_type": "implicit",
+          "storage": "u64"
+        },
+        {
+          "indexed": false,
+          "name": "block_hash",
+          "sol_type": "implicit",
+          "storage": "bytes32"
+        },
+        {
+          "indexed": false,
+          "name": "block_timestamp",
+          "sol_type": "implicit",
+          "storage": "u64"
+        },
+        {
+          "indexed": false,
+          "name": "tx_hash",
+          "sol_type": "implicit",
+          "storage": "bytes32"
+        },
+        {
+          "indexed": false,
+          "name": "log_index",
+          "sol_type": "implicit",
+          "storage": "u64"
+        },
+        {
+          "indexed": false,
+          "name": "address",
+          "sol_type": "implicit",
+          "storage": "address"
+        },
+        {
+          "indexed": false,
+          "name": "_seq",
+          "sol_type": "implicit",
+          "storage": "u64"
+        },
+        {
+          "indexed": true,
+          "name": "_l1SubgraphID",
+          "sol_type": "uint256",
+          "storage": "word32"
+        },
+        {
+          "indexed": true,
+          "name": "_l2SubgraphID",
+          "sol_type": "uint256",
+          "storage": "word32"
+        },
+        {
+          "indexed": true,
+          "name": "_owner",
+          "sol_type": "address",
+          "storage": "address"
+        },
+        {
+          "indexed": false,
+          "name": "_tokens",
+          "sol_type": "uint256",
+          "storage": "word32"
+        }
+      ],
+      "event": "SubgraphReceivedFromL1(uint256,uint256,address,uint256)",
+      "table": "gns__subgraph_received_from_l1",
+      "topic0": "0xb7c59c854d0e4282bb1528e489af598754d77e4e4d57d1e3125c7891c0aa3c69"
+    },
+    {
+      "alias": "gns",
+      "columns": [
+        {
+          "indexed": false,
+          "name": "block_number",
+          "sol_type": "implicit",
+          "storage": "u64"
+        },
+        {
+          "indexed": false,
+          "name": "block_hash",
+          "sol_type": "implicit",
+          "storage": "bytes32"
+        },
+        {
+          "indexed": false,
+          "name": "block_timestamp",
+          "sol_type": "implicit",
+          "storage": "u64"
+        },
+        {
+          "indexed": false,
+          "name": "tx_hash",
+          "sol_type": "implicit",
+          "storage": "bytes32"
+        },
+        {
+          "indexed": false,
+          "name": "log_index",
+          "sol_type": "implicit",
+          "storage": "u64"
+        },
+        {
+          "indexed": false,
+          "name": "address",
+          "sol_type": "implicit",
+          "storage": "address"
+        },
+        {
+          "indexed": false,
+          "name": "_seq",
+          "sol_type": "implicit",
+          "storage": "u64"
+        },
+        {
+          "indexed": true,
+          "name": "subgraphID",
+          "sol_type": "uint256",
+          "storage": "word32"
+        },
+        {
+          "indexed": false,
+          "name": "vSignalCreated",
+          "sol_type": "uint256",
+          "storage": "word32"
+        },
+        {
+          "indexed": false,
+          "name": "tokensSignalled",
+          "sol_type": "uint256",
+          "storage": "word32"
+        },
+        {
+          "indexed": true,
+          "name": "subgraphDeploymentID",
+          "sol_type": "bytes32",
+          "storage": "fixed_bytes"
+        }
+      ],
+      "event": "SubgraphUpgraded(uint256,uint256,uint256,bytes32)",
+      "table": "gns__subgraph_upgraded",
+      "topic0": "0x4620aaedd9a7226ee6b84a89cb97fabff415eb1723fce6c87c41635cc8350896"
+    },
+    {
+      "alias": "gns",
+      "columns": [
+        {
+          "indexed": false,
+          "name": "block_number",
+          "sol_type": "implicit",
+          "storage": "u64"
+        },
+        {
+          "indexed": false,
+          "name": "block_hash",
+          "sol_type": "implicit",
+          "storage": "bytes32"
+        },
+        {
+          "indexed": false,
+          "name": "block_timestamp",
+          "sol_type": "implicit",
+          "storage": "u64"
+        },
+        {
+          "indexed": false,
+          "name": "tx_hash",
+          "sol_type": "implicit",
+          "storage": "bytes32"
+        },
+        {
+          "indexed": false,
+          "name": "log_index",
+          "sol_type": "implicit",
+          "storage": "u64"
+        },
+        {
+          "indexed": false,
+          "name": "address",
+          "sol_type": "implicit",
+          "storage": "address"
+        },
+        {
+          "indexed": false,
+          "name": "_seq",
+          "sol_type": "implicit",
+          "storage": "u64"
+        },
+        {
+          "indexed": true,
+          "name": "subgraphID",
+          "sol_type": "uint256",
+          "storage": "word32"
+        },
+        {
+          "indexed": true,
+          "name": "subgraphDeploymentID",
+          "sol_type": "bytes32",
+          "storage": "fixed_bytes"
+        },
+        {
+          "indexed": false,
+          "name": "versionMetadata",
+          "sol_type": "bytes32",
+          "storage": "fixed_bytes"
+        }
+      ],
+      "event": "SubgraphVersionUpdated(uint256,bytes32,bytes32)",
+      "table": "gns__subgraph_version_updated",
+      "topic0": "0x71d6df5ad69625753de8b2afc150d9b8acb2d12befb0f4709a75a18e3f7bd4bc"
     }
   ]
 }
