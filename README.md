@@ -4,7 +4,7 @@ An installable Nuthatch nest for L2GNS publication activity on Arbitrum One. It 
 package intended to serve Lodestar's Developer Activity chart.
 
 ```sh
-nuthatch init --from https://github.com/nightswatchhq/graph-gns-nest
+nuthatch init --from https://github.com/nuthatch-org/graph-gns-nest
 nuthatch dev --dir graph-gns-nest --rpc https://your-archive-rpc
 ```
 
